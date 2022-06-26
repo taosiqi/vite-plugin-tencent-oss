@@ -1,0 +1,38 @@
+{
+	"name": "vite-plugin-tencent-oss",
+	"version": "0.0.5",
+	"author": "taosiqi",
+	"description": "Upload the production files bundled in the project to Tencent CSS, except for html",
+	"homepage": "https://github.com/taosiqi/vite-plugin-tencent-oss",
+	"repository": "https://github.com/taosiqi/vite-plugin-tencent-oss",
+	"license": "MIT",
+	"main": "index.js",
+	"keywords": [
+		"vite-plugin",
+		"tencent-oss",
+		"tencent-css",
+		"tencent",
+		"腾讯云",
+		"腾讯云对象存储"
+	],
+	"scripts": {
+		"example:build": "pnpm -C example build",
+		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+	},
+	"dependencies": {
+		"await-to-js": "^3.0.0",
+		"conventional-changelog-cli": "^2.2.2",
+		"cos-nodejs-sdk-v5": "^2.11.12",
+		"glob": "^8.0.3",
+		"picocolors": "^1.0.0"
+	},
+	"peerDependencies": {
+		"vite": "^2"
+	},
+	"publishConfig": {
+		"@taosiqi:registry": "https://npm.pkg.github.com"
+	},
+	"engines": {
+		"node": ">=12.0.0"
+	}
+}
