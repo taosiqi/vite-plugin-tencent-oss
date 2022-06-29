@@ -3,7 +3,7 @@ vite-plugin-tencent-oss
 ![license](https://img.shields.io/npm/l/vite-plugin-tencent-oss)
 ![downloads](https://img.shields.io/npm/dt/vite-plugin-tencent-oss)
 
-将项目中打包后生产文件上传到腾讯云CSS，除了 html 以外。
+将项目中打包后生产文件上传到腾讯云COS，除了 html 以外。
 
 # 功能特性
 
