@@ -1,4 +1,4 @@
-vite-plugin-ali-oss
+vite-plugin-tencent-oss
 =======
 ![license](https://img.shields.io/npm/l/vite-plugin-tencent-oss)
 ![downloads](https://img.shields.io/npm/dt/vite-plugin-tencent-oss)
