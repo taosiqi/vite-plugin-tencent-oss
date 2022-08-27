@@ -51,9 +51,11 @@ const options = {
   bucket: '<Your Bucket>'
 }
 
+const prod = process.env.NODE_ENV === 'production'
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'https://foo.com/', // 必须是 URL
+  base: prod ? 'https://foo.com/' : '/', // 打包时必须是 URL
   plugins: [vue(), vitePluginTencentOss(options)]
 })
 ```
