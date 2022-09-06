@@ -41,13 +41,23 @@ module.exports = function vitePluginTencentOss(options) {
         SecretId,
         SecretKey,
       })
+      const ssrClient = buildConfig.ssrManifest
+      const ssrServer = buildConfig.ssr
       const files = await glob.sync(
         outDirPath + '/**/*',
         {
           strict: true,
           nodir: true,
           dot: true,
-          ignore: options.ignore ? options.ignore : '**/*.html'
+          ignore:
+            // custom ignore
+            options.ignore ? options.ignore :
+            // ssr client ignore
+            ssrClient ? ['**/ssr-manifest.json', '**/*.html'] :
+            // ssr server ignore
+            ssrServer ? ['**'] :
+            // default ignore
+            '**/*.html'
         }
       )
       log('tencent oss upload start')
